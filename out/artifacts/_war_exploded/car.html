@@ -1,0 +1,113 @@
+<html>
+<head>
+    <title>servlet处理数据</title>
+    <!-- 包含头部信息用于适应不同设备 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 包含 bootstrap 样式表 -->
+    <link rel="stylesheet" href="https://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body>
+<br>
+
+<div class="container">
+    <br><br>
+    <center>
+        <div class="col-sm-offset-1 col-sm-10">
+            <a class="btn btn-info btn-lg" href="index.jsp">回到主页</a>&nbsp&nbsp&nbsp&nbsp
+			<a class="btn btn-info btn-lg" href="users.jsp">返回商品列表</a>&nbsp&nbsp&nbsp&nbsp
+			<a class="btn btn-info btn-lg" href="users.jsp">生成订单</a>&nbsp&nbsp&nbsp&nbsp
+        </div>
+    </center>
+    <br><br><br>
+
+    <br />
+    <br />
+
+    <table class="table table-striped">
+        <thead>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            console.log("执行查询js");
+            window.onload = init;
+            function init() {
+                init_table();
+            }
+            function init_table() {
+                $.ajax({
+                    url: "http://121.199.49.224:8080/web_war/carItems",
+                    data: {
+                        table_name: "person"
+                    },
+                    type: "POST",
+                    dataType: "json",
+                    success: function (data) {
+                        console.log("查询person成功");
+                        console.log(data);
+                        console.log(data.data);
+                        console.log(data.person);
+                        var tb = document.getElementById("table2");
+                        // for (var i = 0; i < data.person.length; ++i) {
+						// 	console.log("i = " + i);
+						// 	var str;
+						// 	str += "<tr>\n";
+						// 	str +=  
+						// 		"<td><input type=\"checkbox\" name=\"checkItem\" /></td>\n" + 
+                        //         "            <th scope=\"row\">" + i + "</th>\n" +
+                        //         "            <td>" + data.person[i].username + "</td>\n" +
+                        //         "            <td>" + data.person[i].name + "</td>\n";
+                        //     if (data.person[i].age == "null") {
+                        //         str += "            <td> </td>\n";
+                        //     } else {
+                        //         str += "            <td>" + data.person[i].age + "</td>\n";
+                        //     }
+                        //     if (data.person[i].telephone == "null") {
+                        //         str += "            <td> </td>\n";
+                        //     } else {
+                        //         str += "            <td>" + data.person[i].telephone + "</td>\n";
+						// 	}
+                        //     str +=    "        </tr>";
+                        //     tb.innerHTML += str;
+                        //     console.log(str);
+                        // }
+                    }
+                })
+            }
+        </script>
+        </thead>
+	</table>
+	
+    <div class="jumbotron">
+        <center><h2>购物车列表</h2></center>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">用户id</th>
+            <th scope="col">商品id</th>
+            <th scope="col">购买数量</th>
+            <th scope="col">商品单价</th>
+        </tr>
+        </thead>
+        <tbody id="table2">
+        </tbody>
+    </table>
+
+    <br><br><br><br>
+
+</div>
+
+<script>
+    if (screen && screen.width > 480) {
+        document.write('<script type="text/javascript" color="102,185,255" opacity="100" zIndex="-2" count="299" src="//static.ffis.me/javascript/canvas-nest.min.js"><\/script>');
+    }
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+    /* 鼠标点击特效 - 7Core.CN */
+    var a_idx = 0;jQuery(document).ready(function($) {$("body").click(function(e) {var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");var $i = $("<span/>").text(a[a_idx]);
+        a_idx = (a_idx + 1) % a.length;var x = e.pageX,y = e.pageY;$i.css({"z-index": 100000000,"top": y - 20,"left": x,"position": "absolute","font-weight": "bold","color": "#ff6651"});$("body").append($i);$i.animate({"top": y - 180,"opacity": 0},1500,function() {$i.remove();});});});
+</script>
+
+</body>
+</html>

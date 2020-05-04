@@ -2,6 +2,8 @@
   <library name="commons-dbcp-1.4">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-dbcp-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/servlet-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/fastjson-1.2.8.sec06.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

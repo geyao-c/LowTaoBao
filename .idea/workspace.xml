@@ -1,30 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="第四次小班:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="250f9d65-11c1-4a38-a4f2-6aaba4490c20" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_dbcp_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dao/GoodsDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dao/ShopCarDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dao/UsersDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Goods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/ShopCar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/GoodsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/ShopCarService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/UsersService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Servlet/AddCarServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Servlet/ItemServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Servlet/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Servlet/RigisterServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Servlet/ShopCarServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-dbcp-1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-8.0.16.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/fastjson-1.2.8.sec06.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/servlet-api.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/car.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/choice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/click.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/animate-custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/fonts/BebasNeue-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/fonts/BebasNeue-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/fonts/BebasNeue-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/fonts/BebasNeue-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/fonts/Dharma Type Font License.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/fonts/fontomas-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/fonts/fontomas-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/fonts/fontomas-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/fonts/fontomas-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/fonts/franchise-bold-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/fonts/franchise-bold-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/fonts/franchise-bold-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/fonts/franchise-bold-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/style2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/style3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/demo/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/demo/js/prism.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/demo/style/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/demo/style/prism.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/goods.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/ImageAttribution.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/jquery-1.11.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/test.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/quietflow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/quietflow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/query.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/submit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_dbcp_1_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/commons_dbcp_1_4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowTaoBao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LowTaoBao.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LowTaoBao/Dao/GoodsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LowTaoBao/Dao/GoodsDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LowTaoBao/Dao/ShopCarDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LowTaoBao/Dao/ShopCarDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LowTaoBao/Dao/UsersDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LowTaoBao/Dao/UsersDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LowTaoBao/META-INF/LowTaoBao.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LowTaoBao/Servlet/ItemServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LowTaoBao/Servlet/ItemServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LowTaoBao/Servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LowTaoBao/Servlet/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LowTaoBao/Servlet/RigisterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LowTaoBao/Servlet/RigisterServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LowTaoBao/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LowTaoBao/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LowTaoBao/Util/DBUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LowTaoBao/Util/DBUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servlet/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Util/DBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/DBUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,28 +78,41 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="ProjectId" id="1bPzn9fvNdJSG4vrDEtGP71cCdO" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib/commons-dbcp-1.4.jar!/" />
+    <property name="database.data.extractors.current.id" value="Comma-separated (CSV)_id" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib/fastjson-1.2.8.sec06.jar!/" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -72,7 +122,7 @@
       <recent name="D:\2020-大三下\数据库\小班\第四次小班\LowTaoBao\web\WEB-INF\lib" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.27">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test" />
       <module name="LowTaoBao" />
@@ -80,7 +130,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.27" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 9.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.47" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="第四次小班:war exploded">
           <settings>
@@ -88,12 +138,62 @@
           </settings>
         </artifact>
       </deployment>
-      <server-settings />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_27_LowTaoBao_3" />
+      </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="13954" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
@@ -101,23 +201,15 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Test" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.27" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -132,41 +224,117 @@
       <workItem from="1588548683645" duration="375000" />
       <workItem from="1588549932399" duration="45000" />
       <workItem from="1588556643685" duration="27213000" />
+      <workItem from="1588602192567" duration="4389000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588603286357">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1588603286357" />
     <state x="651" y="82" key="#com.intellij.ide.util.MemberChooser" timestamp="1588575804171">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="651" y="82" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1588575804171" />
-    <state x="378" y="107" key="FileChooserDialogImpl" timestamp="1588560342260">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="454" y="130" key="FileChooserDialogImpl" timestamp="1588606473695">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="378" y="107" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1588560342260" />
-    <state width="1237" height="127" key="GridCell.Tab.0.bottom" timestamp="1588594637771">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="454" y="130" key="FileChooserDialogImpl/0.0.1536.824/-1600.0.1600.860@0.0.1536.824" timestamp="1588606473695" />
+    <state x="454" y="130" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588602471983" />
+    <state width="1024" height="210" key="GridCell.Tab.0.bottom" timestamp="1588606555654">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1237" height="127" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1588594637771" />
-    <state width="1237" height="127" key="GridCell.Tab.0.center" timestamp="1588594637770">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1024" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/-1600.0.1600.860@0.0.1536.824" timestamp="1588606555654" />
+    <state width="1024" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588604523291" />
+    <state width="1024" height="210" key="GridCell.Tab.0.center" timestamp="1588606555654">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1237" height="127" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1588594637770" />
-    <state width="1237" height="127" key="GridCell.Tab.0.left" timestamp="1588594637770">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1024" height="210" key="GridCell.Tab.0.center/0.0.1536.824/-1600.0.1600.860@0.0.1536.824" timestamp="1588606555654" />
+    <state width="1024" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588604523291" />
+    <state width="1024" height="210" key="GridCell.Tab.0.left" timestamp="1588606555654">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1237" height="127" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1588594637770" />
-    <state width="1237" height="127" key="GridCell.Tab.0.right" timestamp="1588594637771">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1024" height="210" key="GridCell.Tab.0.left/0.0.1536.824/-1600.0.1600.860@0.0.1536.824" timestamp="1588606555654" />
+    <state width="1024" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588604523291" />
+    <state width="1024" height="210" key="GridCell.Tab.0.right" timestamp="1588606555654">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1237" height="127" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1588594637771" />
-    <state x="78" y="3" width="1038" height="677" key="SettingsEditor" timestamp="1588560357707">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1024" height="210" key="GridCell.Tab.0.right/0.0.1536.824/-1600.0.1600.860@0.0.1536.824" timestamp="1588606555654" />
+    <state width="1024" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588604523291" />
+    <state width="1024" height="210" key="GridCell.Tab.1.bottom" timestamp="1588606555654">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824/-1600.0.1600.860@0.0.1536.824" timestamp="1588606555654" />
+    <state width="1024" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588604448733" />
+    <state width="1024" height="210" key="GridCell.Tab.1.center" timestamp="1588606555654">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.1.center/0.0.1536.824/-1600.0.1600.860@0.0.1536.824" timestamp="1588606555654" />
+    <state width="1024" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588604448733" />
+    <state width="1024" height="210" key="GridCell.Tab.1.left" timestamp="1588606555654">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.1.left/0.0.1536.824/-1600.0.1600.860@0.0.1536.824" timestamp="1588606555654" />
+    <state width="1024" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588604448733" />
+    <state width="1024" height="210" key="GridCell.Tab.1.right" timestamp="1588606555654">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.1.right/0.0.1536.824/-1600.0.1600.860@0.0.1536.824" timestamp="1588606555654" />
+    <state width="1024" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588604448733" />
+    <state width="1024" height="210" key="GridCell.Tab.2.bottom" timestamp="1588606555654">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.2.bottom/0.0.1536.824/-1600.0.1600.860@0.0.1536.824" timestamp="1588606555654" />
+    <state width="1024" height="210" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588604448734" />
+    <state width="1024" height="210" key="GridCell.Tab.2.center" timestamp="1588606555654">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.2.center/0.0.1536.824/-1600.0.1600.860@0.0.1536.824" timestamp="1588606555654" />
+    <state width="1024" height="210" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1588604448733" />
+    <state width="1024" height="210" key="GridCell.Tab.2.left" timestamp="1588606555654">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.2.left/0.0.1536.824/-1600.0.1600.860@0.0.1536.824" timestamp="1588606555654" />
+    <state width="1024" height="210" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1588604448733" />
+    <state width="1024" height="210" key="GridCell.Tab.2.right" timestamp="1588606555654">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.2.right/0.0.1536.824/-1600.0.1600.860@0.0.1536.824" timestamp="1588606555654" />
+    <state width="1024" height="210" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1588604448734" />
+    <state width="212" height="477" key="HiddenNamespacesPopup" timestamp="1588603192194">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="212" height="477" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1588603192194" />
+    <state x="94" y="0" width="1038" height="677" key="SettingsEditor" timestamp="1588606475061">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="78" y="3" width="1038" height="677" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1588560357707" />
+    <state x="94" y="0" key="SettingsEditor/0.0.1536.824/-1600.0.1600.860@0.0.1536.824" timestamp="1588606475061" />
+    <state x="94" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588602474801" />
+    <state x="349" y="67" key="com.intellij.database.dbimport.ImportDialog" timestamp="1588603346744">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="67" key="com.intellij.database.dbimport.ImportDialog/0.0.1536.824@0.0.1536.824" timestamp="1588603346744" />
+    <state x="499" y="217" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1588603344158">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="217" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.0.1536.824@0.0.1536.824" timestamp="1588603344158" />
+    <state x="992" y="338" width="482" height="458" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1588604788992">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="992" y="338" width="482" height="458" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824/-1600.0.1600.860@0.0.1536.824" timestamp="1588604788992" />
     <state x="300" y="0" width="773" height="680" key="find.popup" timestamp="1588561383040">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

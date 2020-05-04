@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+    <title>Login and Registration Form with HTML5 and CSS3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
+    <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+</head>
+<body>
+<div class="container">
+    <!-- Codrops top bar -->
+    <header><br>
+        <h1>注册/登陆</h1>
+        <nav class="codrops-demos">
+            <!--            <span>Click <strong>"注册"</strong> to see the form switch</span>-->
+        </nav>
+    </header>
+    <section>
+        <div id="container_demo" >
+            <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+            <a class="hiddenanchor" id="toregister"></a>
+            <a class="hiddenanchor" id="tologin"></a>
+            <div id="wrapper">
+                <div id="login" class="animate form">
+                    <form autocomplete="on" onsubmit="handleLogin()">
+                        <h1>Log in</h1>
+                        <p>
+                            <label for="userid" class="uid" data-icon="u" >用户id</label>
+                            <input id="userid" name="userid" required="required" type="text" placeholder="你的用户id"/>
+                        </p>
+                        <p>
+                            <label for="username" class="uname" data-icon="u" >用户名</label>
+                            <input id="username" name="username" required="required" type="text" placeholder="你的用户名"/>
+                        </p>
+                        <p>
+                            <label for="password" class="youpasswd" data-icon="p">密码</label>
+                            <input id="password" name="password" required="required" type="password" placeholder="eg. X8df_90EO" />
+                        </p>
+<!--                        <p class="keeplogin">-->
+<!--                            <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />-->
+<!--                            <label for="loginkeeping">Keep me logged in</label>-->
+<!--                        </p>-->
+                    </form>
+                    <p class="login button">
+                        <input type="submit" onclick="handleLogin()" value="Login" />
+                    </p>
+                    <p class="change_link">
+                        还没有账号 ?
+                        <a href="#toregister" class="to_register">注册</a>
+                    </p>
+                </div>
+
+                <div id="register" class="animate form">
+                    <form autocomplete="on">
+                        <h1> Sign up </h1>
+                        <p>
+                            <label for="usernamesignup" class="uname" data-icon="u">用户名</label>
+                            <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+                        </p>
+                        <p>
+                            <label for="emailsignup" class="youmail" data-icon="e" >邮箱</label>
+                            <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/>
+                        </p>
+                        <p>
+                            <label for="passwordsignup" class="youpasswd" data-icon="p">密码</label>
+                            <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                        </p>
+                        <p>
+                            <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">确认密码</label>
+                            <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                        </p>
+                    </form>
+                    <p class="signin button">
+                        <input type="submit" onclick="handleRegister()" value="Sign up"/>
+                    </p>
+                    <p class="change_link">
+                        已有账号 ?
+                        <a href="#tologin" class="to_register"> 登录 </a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--     ajax 实现登陆注册-->
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js"></script>
+    <script>
+        function handleRegister() {
+            var username = document.getElementById("usernamesignup").value;
+            var email = document.getElementById("emailsignup").value;
+            var password = document.getElementById("passwordsignup").value;
+            var conf_password = document.getElementById("passwordsignup_confirm").value;
+
+            if (username.length < 5 || username.length > 10) {
+                alert("请输入长度5-10的英文用户名");
+                return;
+            }
+
+            var name_reg = /^([a-zA-Z0-9_]+)$/;
+            if (!name_reg.test(username)) {
+                alert("用户名只能包含字母数字和下划线!");
+                return;
+            }
+
+            var mail = email;
+
+            var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
+            if (!reg.test(mail)) {
+                alert('邮箱格式不正确，请重新填写!');
+                return;
+            }
+
+            if (password.length < 6 || password.length > 12) {
+                alert("请输入长度6-12长度的密码");
+                return;
+            }
+
+            console.log("username=" +username);
+
+            if (password != conf_password) {
+                alert("请保持密码一致!");
+                return;
+            }
+
+            var pass_reg = /^([a-zA-Z0-9_]+)$/;
+            if (!pass_reg.test(password)) {
+                alert("密码只能包含字母数字和下划线!");
+                return;
+            }
+
+            password = md5(password);
+            // TODO: 注册接口
+            $.ajax({
+                url: "http://121.199.49.224:8080/web_war/register",
+                data: {
+                    username: username,
+                    password: password,
+                    email: email
+                },
+                type: "POST",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    console.log("success");
+                    if (data.status == "1") {
+                        alert("注册成功! 快去登陆吧!");
+                        window.location.href = "http://121.199.49.224:8080/web_war/index.html#tologin";
+                    } else if (data.status == "-1") {
+                        alert("注册失败...已存在这个用户");
+                    } else if (data.status == "-2") {
+                        alert("注册失败...服务器错误...");
+                    }
+                    // location.reload();
+                }
+
+            });
+        }
+
+        function handleLogin() {
+            var userid = document.getElementById("userid").value;
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            console.log("userid=" + userid);
+            console.log("username=" + username);
+
+            // if (username.length < 5 || username.length > 10) {
+            //     alert("请输入长度5-10的英文用户名");
+            //     return;
+            // }
+
+            // var name_reg = /^([a-zA-Z0-9_]+)$/;
+            // if (!name_reg.test(username)) {
+            //     alert("用户名只能包含字母数字和下划线!");
+            //     return;
+            // }
+            // if (password.length < 6 || password.length > 12) {
+            //     alert("请输入长度6-12长度的密码");
+            //     return;
+            // }
+            //
+            // var pass_reg = /^([a-zA-Z0-9_]+)$/;
+            // if (!pass_reg.test(password)) {
+            //     alert("密码只能包含字母数字和下划线!");
+            //     return;
+            // }
+
+            // password = md5(password);
+            console.log("password=" + password)
+
+            // 设置项目的基础 url
+            var baseUrl = "http://localhost:8080/_war_exploded";
+
+
+            // TODO: 登陆接口, 返回 status
+            $.ajax({
+                url: baseUrl + "/login",
+                data: {
+                    UserId: userid,
+                    UserName: username,
+                    Pass: password
+                },
+                type: "POST",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    console.log("success");
+                    if (data.error == "1") {
+                        alert("登陆成功!");
+                        console.log("fuck replace 2")
+                        // TODO: 登陆成功之后跳转到商品页面
+                        location.replace(baseUrl + "/goods.jsp")
+                        // location.replace(baseUrl + "/welcome.jsp?username=" + data.username + "&email=" + data.email);
+                        return;
+                    } else if (data.error == "0") {
+                        alert("登陆失败...没有这个用户");
+                    }
+                    console.log("fuck replace")
+                    // alert("are you ok?")
+                    // location.reload()
+                }
+            });
+        }
+    </script>
+
+</div>
+</body>
+</html>

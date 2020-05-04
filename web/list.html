@@ -1,0 +1,170 @@
+<html>
+
+<head>
+	<title>servlet处理数据</title>
+	<!-- 包含头部信息用于适应不同设备 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 包含 bootstrap 样式表 -->
+	<link rel="stylesheet" href="https://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+
+<body>
+	<br>
+
+	<div class="container">
+		<br><br>
+		<center>
+			<div class="col-sm-offset-1 col-sm-10">
+				<a class="btn btn-info btn-lg" href="index.jsp">回到主页</a>&nbsp&nbsp&nbsp&nbsp
+				<button class="btn btn-info btn-lg" id="btn">加入购物车</button>&nbsp&nbsp&nbsp&nbsp
+				<a class="btn btn-info btn-lg" href="person.jsp">查看购物车</a>&nbsp&nbsp&nbsp&nbsp
+			</div>
+		</center>
+		<br><br><br>
+
+		<button class="btn btn-info btn-lg" id="btn">加入购物车</button>&nbsp&nbsp&nbsp&nbsp
+		<button class="btn btn-info btn-lg" onclick="to_submit()">点这里</button>
+
+		<br />
+		<br />
+
+		<table class="table table-striped">
+			<thead>
+				<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+				<script>
+					console.log("执行查询js");
+					window.onload = init;
+					function init() {
+						init_table();
+					}
+					function init_table() {
+						$.ajax({
+							url: "http://121.199.49.224:8080/web_war/query",
+							// url: "http://121.199.49.224:8080/web_war/login",
+							data: {
+								table_name: "person"
+							},
+							type: "POST",
+							dataType: "json",
+							success: function (data) {
+								console.log("查询person成功");
+								console.log(data);
+								console.log(data.data);
+								console.log(data.person);
+								var tb = document.getElementById("table2");
+								for (var i = 0; i < data.person.length; ++i) {
+									console.log("i = " + i);
+									var str;
+									str += "<tr>\n";
+									str +=
+										"<td><input type=\"checkbox\" name=\"checkItem\" /></td>\n" +
+										"            <td scope=\"row\">" + i + "</td>\n" +
+										"            <td>" + data.person[i].username + "</td>\n" +
+										"            <td>" + data.person[i].name + "</td>\n";
+									if (data.person[i].age == "null") {
+										str += "            <td> </td>\n";
+									} else {
+										str += "            <td>" + data.person[i].age + "</td>\n";
+									}
+									str += "        </tr>";
+									tb.innerHTML += str;
+									console.log(str);
+								}
+							}
+						})
+					}
+				</script>
+			</thead>
+		</table>
+
+		<div class="jumbotron">
+			<center>
+				<h2>商品列表</h2>
+			</center>
+		</div>
+
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th scope="col">#id</th>
+					<th scope="col">商品名</th>
+					<th scope="col">价格</th>
+					<th scope="col">库存</th>
+					<th scope="col">分类</th>
+				</tr>
+			</thead>
+			<form id="table2">
+
+				<!-- 一行示例 -->
+				<tr>
+					<td><input type="checkbox" name="checkItem" value="C11B">C110B</input> C110B</td>
+					<td> 菠萝 </td>
+					<td> 100 </td>
+					<td> 13 </td>
+					<td> 水果 </td>
+				</tr>
+				</tbody>
+			</form>
+
+			<br><br><br><br>
+
+	</div>
+
+
+	<p>点击按钮执行 <em>displayDate()</em> 函数.</p>
+	<button onclick="add_car()">点这里</button>
+	<script>
+		function to_submit() {
+			var items = document.getElementsByName("checkItem");
+			alert(items[0].value)
+			console.log(items)
+			console.log("fuck")
+			// document.getElementById("demo").innerHTML = Date();
+			// document.getElementById("demo").innerHTML = items[0].nodeValue;
+			// 提交
+			document.getElementById("table2").submit();
+		}
+	</script>
+
+	<script>
+		function add_car() {
+			var items = document.getElementsByName("checkItem");
+			alert(items.length);
+			$.ajax({
+				url: "http://121.199.49.224:8080/web_war/add_car",
+				data: {
+					table_name: items
+				},
+				type: "POST",
+				dataType: "json",
+				success: function (data) {
+					alert("添加成功");
+				},
+				error: function (data) {
+					alert("添加失败");
+				}
+			})
+		}
+	</script>
+
+
+	<p id="demo"></p>
+	<script>
+		if (screen && screen.width > 480) {
+			document.write('<script type="text/javascript" color="102,185,255" opacity="100" zIndex="-2" count="299" src="//static.ffis.me/javascript/canvas-nest.min.js"><\/script>');
+		}
+	</script>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		/* 鼠标点击特效 - 7Core.CN */
+		var a_idx = 0; jQuery(document).ready(function ($) {
+			$("body").click(function (e) {
+				var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善"); var $i = $("<span/>").text(a[a_idx]);
+				a_idx = (a_idx + 1) % a.length; var x = e.pageX, y = e.pageY; $i.css({ "z-index": 100000000, "top": y - 20, "left": x, "position": "absolute", "font-weight": "bold", "color": "#ff6651" }); $("body").append($i); $i.animate({ "top": y - 180, "opacity": 0 }, 1500, function () { $i.remove(); });
+			});
+		});
+	</script>
+
+</body>
+
+</html>

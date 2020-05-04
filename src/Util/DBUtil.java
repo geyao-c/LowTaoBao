@@ -20,8 +20,10 @@ public class DBUtil {
     public static Connection getConnetion() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            return connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT", "root", "imthenumber1");
+            return connection = DriverManager.getConnection("jdbc:mysql://localhost:33066/test?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT", "fiveplus", "fiveplus");
+//            return connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT", "root", "imthenumber1");
         } catch (Exception e) {
+            System.out.println("connection failed");
             e.printStackTrace();
         }
         return null;
