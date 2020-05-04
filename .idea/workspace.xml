@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="250f9d65-11c1-4a38-a4f2-6aaba4490c20" name="Default Changelist" comment="" />
+    <list default="true" id="250f9d65-11c1-4a38-a4f2-6aaba4490c20" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_dbcp_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Dao/GoodsDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Dao/ShopCarDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Dao/UsersDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Goods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/ShopCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/GoodsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/ShopCarService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/UsersService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Servlet/AddCarServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Servlet/ItemServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Servlet/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Servlet/RigisterServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Servlet/ShopCarServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-dbcp-1.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-8.0.16.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowTaoBao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LowTaoBao.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Util/DBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/DBUtil.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +38,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1bPzn9fvNdJSG4vrDEtGP71cCdO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,53 +50,32 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib/commons-dbcp-1.4.jar!/" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\2020-大三下\数据库\小班\第四次小班\LowTaoBao\web\WEB-INF\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\2020-大三下\数据库\小班\第四次小班\LowTaoBao\web\WEB-INF\lib" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Test">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
       <module name="LowTaoBao" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="LowTaoBao" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -94,6 +101,11 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -118,10 +130,50 @@
       <option name="presentableId" value="Default" />
       <updated>1588548680334</updated>
       <workItem from="1588548683645" duration="375000" />
+      <workItem from="1588549932399" duration="45000" />
+      <workItem from="1588556643685" duration="27213000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="651" y="82" key="#com.intellij.ide.util.MemberChooser" timestamp="1588575804171">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="651" y="82" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1588575804171" />
+    <state x="378" y="107" key="FileChooserDialogImpl" timestamp="1588560342260">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="378" y="107" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1588560342260" />
+    <state width="1237" height="127" key="GridCell.Tab.0.bottom" timestamp="1588594637771">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="127" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1588594637771" />
+    <state width="1237" height="127" key="GridCell.Tab.0.center" timestamp="1588594637770">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="127" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1588594637770" />
+    <state width="1237" height="127" key="GridCell.Tab.0.left" timestamp="1588594637770">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="127" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1588594637770" />
+    <state width="1237" height="127" key="GridCell.Tab.0.right" timestamp="1588594637771">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="127" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1588594637771" />
+    <state x="78" y="3" width="1038" height="677" key="SettingsEditor" timestamp="1588560357707">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="78" y="3" width="1038" height="677" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1588560357707" />
+    <state x="300" y="0" width="773" height="680" key="find.popup" timestamp="1588561383040">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="300" y="0" width="773" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1588561383040" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1588596567373">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1588596567373" />
   </component>
 </project>
