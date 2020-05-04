@@ -1,6 +1,11 @@
-<html>
-
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
+	<meta charset="UTF-8" />
 	<title>servlet处理数据</title>
 	<!-- 包含头部信息用于适应不同设备 -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,6 +37,8 @@
 			<thead>
 				<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 				<script>
+					// 设置项目的基础 url
+					var baseUrl = "http://localhost:8080/_war_exploded";
 					console.log("执行查询js");
 					window.onload = init;
 					function init() {
@@ -39,8 +46,7 @@
 					}
 					function init_table() {
 						$.ajax({
-							url: "http://121.199.49.224:8080/web_war/query",
-							// url: "http://121.199.49.224:8080/web_war/login",
+							url: baseUrl + "/items",
 							data: {
 								table_name: "person"
 							},
@@ -52,21 +58,18 @@
 								console.log(data.data);
 								console.log(data.person);
 								var tb = document.getElementById("table2");
-								for (var i = 0; i < data.person.length; ++i) {
+								for (var i = 0; i < data.items.length; ++i) {
 									console.log("i = " + i);
-									var str;
+									var str = "";
 									str += "<tr>\n";
 									str +=
-										"<td><input type=\"checkbox\" name=\"checkItem\" /></td>\n" +
-										"            <td scope=\"row\">" + i + "</td>\n" +
-										"            <td>" + data.person[i].username + "</td>\n" +
-										"            <td>" + data.person[i].name + "</td>\n";
-									if (data.person[i].age == "null") {
-										str += "            <td> </td>\n";
-									} else {
-										str += "            <td>" + data.person[i].age + "</td>\n";
-									}
-									str += "        </tr>";
+										"    <td><input type=\"checkbox\" name=\"checkItem\" " +
+											"value=\"" + data.items[i].GoodId + "\" />" + data.items[i].GoodId + "</td>\n" +
+											"    <td>" + data.items[i].GoodName + "</td>\n" +
+											"    <td>" + data.items[i].Price + "</td>\n" +
+											"    <td>" + data.items[i].Number + "</td>\n" +
+											"    <td>" + data.items[i].Category + "</td>\n";
+									str += "</tr>";
 									tb.innerHTML += str;
 									console.log(str);
 								}
@@ -86,25 +89,15 @@
 		<table class="table table-striped">
 			<thead>
 				<tr>
-					<th scope="col">#id</th>
-					<th scope="col">商品名</th>
-					<th scope="col">价格</th>
-					<th scope="col">库存</th>
-					<th scope="col">分类</th>
+					<td scope="col">GoodId</td>
+					<td scope="col">GoodName</td>
+					<td scope="col">Price</td>
+					<td scope="col">Number</td>
+					<td scope="col">Category</td>
 				</tr>
 			</thead>
-			<form id="table2">
-
-				<!-- 一行示例 -->
-				<tr>
-					<td><input type="checkbox" name="checkItem" value="C11B">C110B</input> C110B</td>
-					<td> 菠萝 </td>
-					<td> 100 </td>
-					<td> 13 </td>
-					<td> 水果 </td>
-				</tr>
-				</tbody>
-			</form>
+			<tbody id="table2">
+			</tbody>
 
 			<br><br><br><br>
 

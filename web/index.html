@@ -65,12 +65,12 @@
                     <form autocomplete="on">
                         <h1> Sign up </h1>
                         <p>
-                            <label for="usernamesignup" class="uname" data-icon="u">用户名</label>
-                            <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+                            <label for="useridsignup" class="uid" data-icon="u">用户id</label>
+                            <input id="useridsignup" name="useridsignup" required="required" type="text" placeholder="user id" />
                         </p>
                         <p>
-                            <label for="emailsignup" class="youmail" data-icon="e" >邮箱</label>
-                            <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/>
+                            <label for="usernamesignup" class="uname" data-icon="u">用户名</label>
+                            <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
                         </p>
                         <p>
                             <label for="passwordsignup" class="youpasswd" data-icon="p">密码</label>
@@ -99,69 +99,74 @@
     <script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js"></script>
     <script>
         function handleRegister() {
+            var userid = document.getElementById("useridsignup").value;
             var username = document.getElementById("usernamesignup").value;
-            var email = document.getElementById("emailsignup").value;
+            // var email = document.getElementById("emailsignup").value;
             var password = document.getElementById("passwordsignup").value;
             var conf_password = document.getElementById("passwordsignup_confirm").value;
 
-            if (username.length < 5 || username.length > 10) {
-                alert("请输入长度5-10的英文用户名");
-                return;
-            }
+            console.log(userid);
+            console.log(username);
 
-            var name_reg = /^([a-zA-Z0-9_]+)$/;
-            if (!name_reg.test(username)) {
-                alert("用户名只能包含字母数字和下划线!");
-                return;
-            }
-
-            var mail = email;
-
-            var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
-            if (!reg.test(mail)) {
-                alert('邮箱格式不正确，请重新填写!');
-                return;
-            }
-
-            if (password.length < 6 || password.length > 12) {
-                alert("请输入长度6-12长度的密码");
-                return;
-            }
-
-            console.log("username=" +username);
-
-            if (password != conf_password) {
-                alert("请保持密码一致!");
-                return;
-            }
-
-            var pass_reg = /^([a-zA-Z0-9_]+)$/;
-            if (!pass_reg.test(password)) {
-                alert("密码只能包含字母数字和下划线!");
-                return;
-            }
-
-            password = md5(password);
+            // if (username.length < 5 || username.length > 10) {
+            //     alert("请输入长度5-10的英文用户名");
+            //     return;
+            // }
+            //
+            // var name_reg = /^([a-zA-Z0-9_]+)$/;
+            // if (!name_reg.test(username)) {
+            //     alert("用户名只能包含字母数字和下划线!");
+            //     return;
+            // }
+            //
+            // var mail = email;
+            //
+            // var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
+            // if (!reg.test(mail)) {
+            //     alert('邮箱格式不正确，请重新填写!');
+            //     return;
+            // }
+            //
+            // if (password.length < 6 || password.length > 12) {
+            //     alert("请输入长度6-12长度的密码");
+            //     return;
+            // }
+            //
+            // console.log("username=" +username);
+            //
+            // if (password != conf_password) {
+            //     alert("请保持密码一致!");
+            //     return;
+            // }
+            //
+            // var pass_reg = /^([a-zA-Z0-9_]+)$/;
+            // if (!pass_reg.test(password)) {
+            //     alert("密码只能包含字母数字和下划线!");
+            //     return;
+            // }
+            //
+            // password = md5(password);
+            // 设置项目的基础 url
+            var baseUrl = "http://localhost:8080/_war_exploded";
             // TODO: 注册接口
             $.ajax({
-                url: "http://121.199.49.224:8080/web_war/register",
+                url: baseUrl + "/register",
                 data: {
-                    username: username,
-                    password: password,
-                    email: email
+                    UserId: userid,
+                    UserName: username,
+                    Pass: password
                 },
                 type: "POST",
                 dataType: "json",
                 success: function (data) {
                     console.log(data);
                     console.log("success");
-                    if (data.status == "1") {
+                    console.log(data);
+                    if (data.error == "1") {
                         alert("注册成功! 快去登陆吧!");
-                        window.location.href = "http://121.199.49.224:8080/web_war/index.html#tologin";
-                    } else if (data.status == "-1") {
-                        alert("注册失败...已存在这个用户");
-                    } else if (data.status == "-2") {
-                        alert("注册失败...服务器错误...");
+                        window.location.href = baseUrl + "/index.html#tologin";
+                    } else if (data.error == "0") {
+                        alert("注册失败...");
                     }
                     // location.reload();
                 }
@@ -225,7 +230,7 @@
                         // location.replace(baseUrl + "/welcome.jsp?username=" + data.username + "&email=" + data.email);
                         return;
                     } else if (data.error == "0") {
-                        alert("登陆失败...没有这个用户");
+                        alert("登陆失败...");
                     }
                     console.log("fuck replace")
                     // alert("are you ok?")

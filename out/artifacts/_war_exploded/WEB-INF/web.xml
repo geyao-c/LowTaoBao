@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
-    <!--    user-->
+    <!--  login -->
     <servlet>
         <servlet-name>Servlet.LoginServlet</servlet-name>
         <servlet-class>Servlet.LoginServlet</servlet-class>
@@ -13,6 +13,39 @@
     <servlet-mapping>
         <servlet-name>Servlet.LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <!--  register -->
+    <servlet>
+        <servlet-name>Servlet.RegisterServlet</servlet-name>
+        <servlet-class>Servlet.RegisterServlet</servlet-class>
+        <!--        // 这个class记得要配置-->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet.RegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <!--  items  -->
+    <servlet>
+        <servlet-name>Servlet.ItemServlet</servlet-name>
+        <servlet-class>Servlet.ItemServlet</servlet-class>
+        <!--        // 这个class记得要配置-->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet.ItemServlet</servlet-name>
+        <url-pattern>/items</url-pattern>
+    </servlet-mapping>
+
+    <!--  add car  -->
+    <servlet>
+        <servlet-name>Servlet.AddCarServlet</servlet-name>
+        <servlet-class>Servlet.AddCarServlet</servlet-class>
+        <!--        // 这个class记得要配置-->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet.AddCarServlet</servlet-name>
+        <url-pattern>/add_car</url-pattern>
     </servlet-mapping>
 
 </web-app>
