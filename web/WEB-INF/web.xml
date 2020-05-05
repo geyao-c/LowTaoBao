@@ -48,4 +48,15 @@
         <url-pattern>/add_car</url-pattern>
     </servlet-mapping>
 
+    <!--  shop car  -->
+    <servlet>
+        <servlet-name>Servlet.ShopCarServlet</servlet-name>
+        <servlet-class>Servlet.ShopCarServlet</servlet-class>
+        <!--        // 这个class记得要配置-->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet.ShopCarServlet</servlet-name>
+        <url-pattern>/shop_car</url-pattern>
+    </servlet-mapping>
+
 </web-app>

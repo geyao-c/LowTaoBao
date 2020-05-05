@@ -20,19 +20,17 @@
 		<br><br>
 		<center>
 			<div class="col-sm-offset-1 col-sm-10">
-				<a class="btn btn-info btn-lg" href="index.jsp">回到主页</a>&nbsp&nbsp&nbsp&nbsp
-				<button class="btn btn-info btn-lg" id="btn">加入购物车</button>&nbsp&nbsp&nbsp&nbsp
-				<a class="btn btn-info btn-lg" href="person.jsp">查看购物车</a>&nbsp&nbsp&nbsp&nbsp
+				<a class="btn btn-info btn-lg" href="index.html">回到主页</a>&nbsp&nbsp&nbsp&nbsp
+				<button class="btn btn-info btn-lg" onclick="add_car()">点击添加到购物车</button>&nbsp&nbsp&nbsp&nbsp
+				<a class="btn btn-info btn-lg" href="car.html">查看购物车</a>&nbsp&nbsp&nbsp&nbsp
 			</div>
 		</center>
 		<br><br><br>
 
-		<button class="btn btn-info btn-lg" id="btn">加入购物车</button>&nbsp&nbsp&nbsp&nbsp
-		<button class="btn btn-info btn-lg" onclick="to_submit()">点这里</button>
-
 		<br />
 		<br />
 
+		<!--  获取商品列表  -->
 		<table class="table table-striped">
 			<thead>
 				<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
@@ -104,34 +102,33 @@
 	</div>
 
 
-	<p>点击按钮执行 <em>displayDate()</em> 函数.</p>
-	<button onclick="add_car()">点这里</button>
+<!--  提交到购物车  -->
 	<script>
-		function to_submit() {
-			var items = document.getElementsByName("checkItem");
-			alert(items[0].value)
-			console.log(items)
-			console.log("fuck")
-			// document.getElementById("demo").innerHTML = Date();
-			// document.getElementById("demo").innerHTML = items[0].nodeValue;
-			// 提交
-			document.getElementById("table2").submit();
-		}
-	</script>
-
-	<script>
+		var baseUrl = "http://localhost:8080/_war_exploded";
 		function add_car() {
 			var items = document.getElementsByName("checkItem");
-			alert(items.length);
+			var list_str = "";
+			for (var i = 0; i < items.length; i++) {
+				// 检查复选框状态
+				if (items[i].checked) {
+					list_str += items[i].value + ",";
+				}
+			}
 			$.ajax({
-				url: "http://121.199.49.224:8080/web_war/add_car",
+				url: baseUrl + "/add_car",
 				data: {
-					table_name: items
+					items: list_str
 				},
+				traditional: true,
 				type: "POST",
 				dataType: "json",
 				success: function (data) {
-					alert("添加成功");
+					console.log(data);
+					if (data.error == "1") {
+						alert("添加成功");
+					} else {
+						alert("添加失败, 请确认勾选商品或商品有库存");
+					}
 				},
 				error: function (data) {
 					alert("添加失败");

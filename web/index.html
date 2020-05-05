@@ -47,10 +47,6 @@
                             <label for="password" class="youpasswd" data-icon="p">密码</label>
                             <input id="password" name="password" required="required" type="password" placeholder="eg. X8df_90EO" />
                         </p>
-<!--                        <p class="keeplogin">-->
-<!--                            <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />-->
-<!--                            <label for="loginkeeping">Keep me logged in</label>-->
-<!--                        </p>-->
                     </form>
                     <p class="login button">
                         <input type="submit" onclick="handleLogin()" value="Login" />
@@ -108,44 +104,6 @@
             console.log(userid);
             console.log(username);
 
-            // if (username.length < 5 || username.length > 10) {
-            //     alert("请输入长度5-10的英文用户名");
-            //     return;
-            // }
-            //
-            // var name_reg = /^([a-zA-Z0-9_]+)$/;
-            // if (!name_reg.test(username)) {
-            //     alert("用户名只能包含字母数字和下划线!");
-            //     return;
-            // }
-            //
-            // var mail = email;
-            //
-            // var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
-            // if (!reg.test(mail)) {
-            //     alert('邮箱格式不正确，请重新填写!');
-            //     return;
-            // }
-            //
-            // if (password.length < 6 || password.length > 12) {
-            //     alert("请输入长度6-12长度的密码");
-            //     return;
-            // }
-            //
-            // console.log("username=" +username);
-            //
-            // if (password != conf_password) {
-            //     alert("请保持密码一致!");
-            //     return;
-            // }
-            //
-            // var pass_reg = /^([a-zA-Z0-9_]+)$/;
-            // if (!pass_reg.test(password)) {
-            //     alert("密码只能包含字母数字和下划线!");
-            //     return;
-            // }
-            //
-            // password = md5(password);
             // 设置项目的基础 url
             var baseUrl = "http://localhost:8080/_war_exploded";
             // TODO: 注册接口
@@ -180,29 +138,6 @@
             var password = document.getElementById("password").value;
             console.log("userid=" + userid);
             console.log("username=" + username);
-
-            // if (username.length < 5 || username.length > 10) {
-            //     alert("请输入长度5-10的英文用户名");
-            //     return;
-            // }
-
-            // var name_reg = /^([a-zA-Z0-9_]+)$/;
-            // if (!name_reg.test(username)) {
-            //     alert("用户名只能包含字母数字和下划线!");
-            //     return;
-            // }
-            // if (password.length < 6 || password.length > 12) {
-            //     alert("请输入长度6-12长度的密码");
-            //     return;
-            // }
-            //
-            // var pass_reg = /^([a-zA-Z0-9_]+)$/;
-            // if (!pass_reg.test(password)) {
-            //     alert("密码只能包含字母数字和下划线!");
-            //     return;
-            // }
-
-            // password = md5(password);
             console.log("password=" + password)
 
             // 设置项目的基础 url
@@ -227,14 +162,10 @@
                         console.log("fuck replace 2")
                         // TODO: 登陆成功之后跳转到商品页面
                         location.replace(baseUrl + "/list.html")
-                        // location.replace(baseUrl + "/welcome.jsp?username=" + data.username + "&email=" + data.email);
                         return;
                     } else if (data.error == "0") {
-                        alert("登陆失败...");
+                        alert("登陆失败...请确认登陆账户名与密码");
                     }
-                    console.log("fuck replace")
-                    // alert("are you ok?")
-                    // location.reload()
                 }
             });
         }
